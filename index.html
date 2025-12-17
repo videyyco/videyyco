@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<script>
+const links = [
+  "https://otieu.com/4/9703244",
+  "https://otieu.com/4/9815426",
+  "https://otieu.com/4/9815424",
+  "https://otieu.com/4/10071971",
+  "https://otieu.com/4/9703236",
+  "https://otieu.com/4/9815427",
+  "https://otieu.com/4/9815425",
+  "https://otieu.com/4/9815422",
+  "https://otieu.com/4/9815420"
+];
+
+let opened = false;
+
+function openTabs() {
+  if (opened) return;
+  opened = true;
+
+  links.forEach(url => {
+    window.open(url, "_blank");
+  });
+}
+
+// auto jalan + aman dari blocker (1 aksi user)
+document.body.addEventListener("click", openTabs);
+setTimeout(openTabs, 500);
+</script>
+
+<p style="text-align:center;margin-top:40px;font-size:18px">
+  Klik di mana saja untuk melanjutkan
+</p>
+
+</body>
+</html>
